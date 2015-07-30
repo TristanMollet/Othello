@@ -1,11 +1,20 @@
-#include "mainwindow.h"
-#include <QApplication>
 
-int main(int argc, char *argv[])
+#include <QCoreApplication>
+#include "metier/plateau.h"
+#include <iostream>
+using namespace std;
+int main()
+
 {
-    QApplication a(argc, argv);
-    MainWindow w;
-    w.show();
+    cout << "Salut" << endl;
+    Plateau p(8,8);
 
-    return a.exec();
+    cout << "Salut" << endl;
+
+    cout << p;
+//    QApplication a(argc, argv);
+//    MainWindow w;
+//    w.show();
+
+//    return a.exec();
 }

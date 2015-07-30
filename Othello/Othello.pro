@@ -4,20 +4,35 @@
 #
 #-------------------------------------------------
 
-QT       += core gui
+#QT       += core gui
+QT       += core
 
-greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
+QT       -= gui
+#greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 TARGET = Othello
+
+
+CONFIG   += console
+CONFIG   -= app_bundle
+
 TEMPLATE = app
 
-
 SOURCES += main.cpp\
-        mainwindow.cpp \
-    metier/pion.cpp
+    metier/plateau.cpp \
+    metier/jeton.cpp \
+    metier/othello.cpp
 
-HEADERS  += mainwindow.h \
-    metier/pion.h \
-    metier/Couleur.h
+HEADERS  += \
+    metier/plateau.h \
+    metier/Couleur.h \
+    metier/jeton.h \
+    metier/othello.h
 
-FORMS    += mainwindow.ui
+#FORMS    +=
+
+QMAKE_CXXFLAGS += -std=c++11 -pedantic-errors
+
+
+
+
