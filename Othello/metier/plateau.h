@@ -40,6 +40,29 @@ public:
 
     friend std::ostream &operator<<( std::ostream &flux, Plateau const& plateau);
 
+    /*!
+     * \brief ajouterJeton
+     * \param L la lettre de la colonne
+     * \param l le numéro de ligne
+     * \param c la couleur du jeton
+     * \return
+     */
+    bool ajouterJeton(char L,int l, Couleur c);
+private:
+    /*!
+     * \brief lettreToInt Transforme une lettre en son chiffre correpondant pour les numeros de colonne
+     * \param c la lettre
+     * \return un entier positif si la lettre est correct, -1 si la lettre est mauvaise.
+     */
+    int lettreToInt(char c);
+
+    bool verifierPosition(int ligne,int colonne);
+    bool verifNormal(int ligne,int colonne);
+    bool verifLigne0(int ligne,int colonne);
+    bool verifLigneMax(int ligne,int colonne);
+    bool verifCol0(int ligne,int colonne);
+    bool verifColMax(int ligne,int colonne);
+
 
 
 

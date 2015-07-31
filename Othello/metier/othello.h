@@ -10,6 +10,9 @@ public:
 
     inline Plateau * getGrille(){return grille;}
 
+    void jouerPion(Couleur c);
+
+
 
 };
 
