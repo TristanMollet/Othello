@@ -7,51 +7,54 @@ using namespace std;
 int main()
 
 {
-    bool placer =false;
     Othello *ot;
-    ot = new Othello();
-    cout << *ot->getGrille();
+    ot=new Othello();
+    ot->play();
+//    bool placer =false;
+//    Othello *ot;
+//    ot = new Othello();
+//    cout << *ot->getGrille();
 
-    ot->jouerPion(Couleur::NOIR);
-    cout << *ot->getGrille();
+//    ot->jouerPion(Couleur::NOIR);
+//    cout << *ot->getGrille();
 
-    ot->jouerPion(Couleur::BLANC);
-    cout << *ot->getGrille();
-    ot->jouerPion(Couleur::NOIR);
-    cout << *ot->getGrille();
+//    ot->jouerPion(Couleur::BLANC);
+//    cout << *ot->getGrille();
+//    ot->jouerPion(Couleur::NOIR);
+//    cout << *ot->getGrille();
 
-    ot->jouerPion(Couleur::BLANC);
-    cout << *ot->getGrille();
-    ot->jouerPion(Couleur::NOIR);
-    cout << *ot->getGrille();
+//    ot->jouerPion(Couleur::BLANC);
+//    cout << *ot->getGrille();
+//    ot->jouerPion(Couleur::NOIR);
+//    cout << *ot->getGrille();
 
-    ot->jouerPion(Couleur::BLANC);
-    cout << *ot->getGrille();
-    ot->jouerPion(Couleur::NOIR);
-    cout << *ot->getGrille();
+//    ot->jouerPion(Couleur::BLANC);
+//    cout << *ot->getGrille();
+//    ot->jouerPion(Couleur::NOIR);
+//    cout << *ot->getGrille();
 
-    ot->jouerPion(Couleur::BLANC);
-    cout << *ot->getGrille();
-    ot->jouerPion(Couleur::NOIR);
-    cout << *ot->getGrille();
+//    ot->jouerPion(Couleur::BLANC);
+//    cout << *ot->getGrille();
+//    ot->jouerPion(Couleur::NOIR);
+//    cout << *ot->getGrille();
 
-    ot->jouerPion(Couleur::BLANC);
-    cout << *ot->getGrille();
-    ot->jouerPion(Couleur::NOIR);
-    cout << *ot->getGrille();
+//    ot->jouerPion(Couleur::BLANC);
+//    cout << *ot->getGrille();
+//    ot->jouerPion(Couleur::NOIR);
+//    cout << *ot->getGrille();
 
-    ot->jouerPion(Couleur::BLANC);
-    cout << *ot->getGrille();
-    ot->jouerPion(Couleur::NOIR);
-    cout << *ot->getGrille();
+//    ot->jouerPion(Couleur::BLANC);
+//    cout << *ot->getGrille();
+//    ot->jouerPion(Couleur::NOIR);
+//    cout << *ot->getGrille();
 
-    ot->jouerPion(Couleur::BLANC);
-    cout << *ot->getGrille();
-    ot->jouerPion(Couleur::NOIR);
-    cout << *ot->getGrille();
+//    ot->jouerPion(Couleur::BLANC);
+//    cout << *ot->getGrille();
+//    ot->jouerPion(Couleur::NOIR);
+//    cout << *ot->getGrille();
 
-    ot->jouerPion(Couleur::BLANC);
-    cout << *ot->getGrille();
+//    ot->jouerPion(Couleur::BLANC);
+//    cout << *ot->getGrille();
     //    Plateau p(8,8);
 
     //     cout << p;

@@ -20,8 +20,158 @@ bool Plateau::ajouterJeton(char L, int l, Couleur c)
     if(colonne >=0 && colonne < 8 && verifierPosition(l,colonne)){
         plateau[l][colonne]->setCouleur(c);
         placer = true;
+        reverse(l,colonne,c);
     }
     return placer;
+}
+
+Couleur Plateau::gagnant()
+{
+    int nbNoir =0;
+    int nbBlanc=0;
+    for (int i =0; i<largeur;i++){
+        for(int j=0;j<longueur;j++){
+            if(plateau[i][j]->getCouleur() == Couleur::NOIR){
+                nbNoir +=1;
+            }else {
+                nbBlanc +=1;
+            }
+        }
+    }
+    Couleur gagnant(Couleur::VIDE);
+    if(nbNoir > nbBlanc){
+        gagnant = Couleur::NOIR;
+    }else{
+        gagnant = Couleur::BLANC;
+    }
+    return gagnant;
+}
+
+void Plateau::reverse(int ligne, int colonne, Couleur c)
+{
+    reverseHaut(ligne,colonne,c);
+    reverseBas(ligne,colonne,c);
+    reverseDroite(ligne,colonne+1,c);
+    reverseGauche(ligne,colonne-1,c);
+    reverseDiaHautDroit(ligne,colonne,c);
+    reverseDiaHautGauche(ligne,colonne,c);
+    reverseDiaBasDroit(ligne,colonne,c);
+    reverseDiaBasGauche(ligne,colonne,c);
+}
+
+void Plateau::reverseHaut(int ligne,int colonne,Couleur c){
+    if(ligne-1 >= 0){
+        if(plateau[ligne-1][colonne]->getCouleur() != Couleur::VIDE &&
+                plateau[ligne-1][colonne]->getCouleur() != c){
+            reverseHaut(ligne-1,colonne,c);
+        }else if (plateau[ligne-1][colonne]->getCouleur() == c) {
+            plateau[ligne][colonne]->setCouleur(c);
+        }
+        if(plateau[ligne-1][colonne]->getCouleur() == c){
+            plateau[ligne][colonne]->setCouleur(c);
+
+        }
+    }
+}
+
+void Plateau::reverseBas(int ligne,int colonne,Couleur c){
+    if(ligne+1 <8){
+        if(plateau[ligne+1][colonne]->getCouleur() != Couleur::VIDE &&
+                plateau[ligne+1][colonne]->getCouleur() != c){
+            reverseBas(ligne+1,colonne,c);
+        }else if (plateau[ligne+1][colonne]->getCouleur() == c) {
+            plateau[ligne][colonne]->setCouleur(c);
+        }
+        if(plateau[ligne+1][colonne]->getCouleur() == c){
+            plateau[ligne][colonne]->setCouleur(c);
+        }
+    }
+}
+
+void Plateau::reverseDroite(int ligne,int colonne,Couleur c){
+    if(colonne+1 <8){
+        if(plateau[ligne][colonne+1]->getCouleur() != Couleur::VIDE &&
+                plateau[ligne][colonne+1]->getCouleur() != c){
+            reverseDroite(ligne,colonne+1,c);
+        }else if (plateau[ligne][colonne+1]->getCouleur() == c) {
+            plateau[ligne][colonne]->setCouleur(c);
+        }
+        if(plateau[ligne][colonne+1]->getCouleur() == c){
+            plateau[ligne][colonne]->setCouleur(c);
+        }
+    }
+}
+
+
+void Plateau::reverseGauche(int ligne,int colonne,Couleur c){
+    if(colonne-1 >=0){
+        if(plateau[ligne][colonne-1]->getCouleur() != Couleur::VIDE &&
+                plateau[ligne][colonne-1]->getCouleur() != c){
+            reverseGauche(ligne,colonne-1,c);
+        }else if (plateau[ligne][colonne-1]->getCouleur() == c) {
+            plateau[ligne][colonne]->setCouleur(c);
+        }
+        if(plateau[ligne][colonne-1]->getCouleur() == c){
+            plateau[ligne][colonne]->setCouleur(c);
+        }
+    }
+}
+
+
+void Plateau::reverseDiaHautDroit(int ligne,int colonne,Couleur c){
+    if(colonne+1 <8 && ligne -1 >=0){
+        if(plateau[ligne-1][colonne+1]->getCouleur() != Couleur::VIDE &&
+                plateau[ligne-1][colonne+1]->getCouleur() != c){
+            reverseDiaHautDroit(ligne-1,colonne+1,c);
+        }else if (plateau[ligne-1][colonne+1]->getCouleur() == c) {
+            plateau[ligne][colonne]->setCouleur(c);
+        }
+        if(plateau[ligne-1][colonne+1]->getCouleur() == c){
+            plateau[ligne][colonne]->setCouleur(c);
+        }
+    }
+}
+
+void Plateau::reverseDiaHautGauche(int ligne,int colonne,Couleur c){
+    if(colonne-1 >=0 && ligne -1 >=0){
+        if(plateau[ligne-1][colonne-1]->getCouleur() != Couleur::VIDE &&
+                plateau[ligne-1][colonne-1]->getCouleur() != c){
+            reverseDiaHautGauche(ligne-1,colonne-1,c);
+        }else if (plateau[ligne-1][colonne-1]->getCouleur() == c) {
+            plateau[ligne][colonne]->setCouleur(c);
+        }
+        if(plateau[ligne-1][colonne-1]->getCouleur() == c){
+            plateau[ligne][colonne]->setCouleur(c);
+        }
+    }
+}
+
+void Plateau::reverseDiaBasDroit(int ligne,int colonne,Couleur c){
+    if(colonne+1 <8 && ligne +1 <8){
+        if(plateau[ligne+1][colonne+1]->getCouleur() != Couleur::VIDE &&
+                plateau[ligne+1][colonne+1]->getCouleur() != c){
+            reverseDiaBasDroit(ligne+1,colonne+1,c);
+        }else if (plateau[ligne+1][colonne+1]->getCouleur() == c) {
+            plateau[ligne][colonne]->setCouleur(c);
+        }
+        if(plateau[ligne+1][colonne+1]->getCouleur() == c){
+            plateau[ligne][colonne]->setCouleur(c);
+        }
+    }
+}
+
+void Plateau::reverseDiaBasGauche(int ligne,int colonne,Couleur c){
+    if(colonne-1 >=0 && ligne +1 <8){
+        if(plateau[ligne+1][colonne-1]->getCouleur() != Couleur::VIDE &&
+                plateau[ligne+1][colonne-1]->getCouleur() != c){
+            reverseDiaBasGauche(ligne+1,colonne-1,c);
+        }else if (plateau[ligne+1][colonne-1]->getCouleur() == c) {
+            plateau[ligne][colonne]->setCouleur(c);
+        }
+        if(plateau[ligne+1][colonne-1]->getCouleur() == c){
+            plateau[ligne][colonne]->setCouleur(c);
+        }
+    }
 }
 
 int Plateau::lettreToInt(char c)
@@ -85,15 +235,11 @@ bool Plateau::verifLigneMax(int ligne, int colonne)
 {
     bool posOK = false;
     if(colonne != 0 && colonne !=7){
-        std::cout << "Pas dans un coin" << std::endl;
         if(plateau[ligne][colonne-1]->getCouleur() != Couleur::VIDE){
-            std::cout << "ligne et colonne -1" << std::endl;
             posOK= true;
         }else if (plateau[ligne][colonne+1]->getCouleur()!= Couleur::VIDE) {
-            std::cout << "ligne et colonne +1" << std::endl;
             posOK =true;
         }else if (plateau[ligne-1][colonne-1]->getCouleur()!= Couleur::VIDE) {
-            std::cout << "ligne-1 et colonne -1" << std::endl;
             posOK =true;
         }else if (plateau[ligne-1][colonne]->getCouleur()!= Couleur::VIDE) {
             posOK =true;
@@ -101,7 +247,6 @@ bool Plateau::verifLigneMax(int ligne, int colonne)
             posOK =true;
         }
     }else if (colonne == 0) {
-        std::cout << "Dans le coin gauche" << std::endl;
         if(plateau[ligne][colonne+1]->getCouleur()!= Couleur::VIDE){
             posOK = true;
         }else if (plateau[ligne -1][colonne]->getCouleur()!= Couleur::VIDE) {
@@ -110,7 +255,6 @@ bool Plateau::verifLigneMax(int ligne, int colonne)
 
         }
     }else if (colonne ==7) {
-        std::cout << "Dans le coin droit" << std::endl;
         if(plateau[ligne][colonne -1]->getCouleur()!= Couleur::VIDE){
             posOK = true;
         }else if (plateau[ligne-1][colonne-1]->getCouleur()!= Couleur::VIDE) {
@@ -228,28 +372,22 @@ bool Plateau::verifLigne0(int ligne,int colonne){
 
 bool Plateau::verifierPosition(int ligne, int colonne)
 {
-    std::cout << "Dans verifierPosition" << std::endl;
     bool posOK =false;
-    if(plateau[ligne][colonne]->getCouleur()==Couleur::VIDE){
+    if((ligne>=0 && ligne <8) && (colonne >=0 && colonne <8) &&
+            plateau[ligne][colonne]->getCouleur()==Couleur::VIDE){
         if(ligne - 1 >=0 && colonne -1 >= 0 && ligne +1 <7 && colonne+1 <7){
-            std::cout << "Je verifie normalement"<< std::endl;
             posOK =verifNormal(ligne,colonne);
         }else if (ligne == 0) {
-            std::cout << "Je verifie ligne0" << std::endl;
             posOK = verifLigne0(ligne,colonne);
         }else if (ligne == 7) {
-            std::cout<< "Je verifie ligneMax" << std::endl;
             posOK = verifLigneMax(ligne,colonne);
         }else if (colonne == 0) {
-            std::cout << "Je verifie colonne 0" << std::endl;
             posOK  = verifCol0(ligne,colonne);
         }else{
-            std::cout << "Je verifie colonneMax" << std::endl;
             posOK = verifColMax(ligne,colonne);
         }
 
     }
-    std::cout << "Fin verifierPosition"<< std::endl;
     return posOK;
 }
 

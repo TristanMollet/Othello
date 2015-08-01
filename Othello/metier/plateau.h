@@ -48,6 +48,8 @@ public:
      * \return
      */
     bool ajouterJeton(char L,int l, Couleur c);
+    Couleur gagnant();
+    void reverse(int ligne,int colonne, Couleur c);
 private:
     /*!
      * \brief lettreToInt Transforme une lettre en son chiffre correpondant pour les numeros de colonne
@@ -62,6 +64,15 @@ private:
     bool verifLigneMax(int ligne,int colonne);
     bool verifCol0(int ligne,int colonne);
     bool verifColMax(int ligne,int colonne);
+
+    void reverseHaut(int ligne,int colonne,Couleur c);
+    void reverseBas(int ligne,int colonne,Couleur c);
+    void reverseDroite(int ligne,int colonne,Couleur c);
+    void reverseGauche(int ligne,int colonne,Couleur c);
+    void reverseDiaHautDroit(int ligne,int colonne,Couleur c);
+    void reverseDiaHautGauche(int ligne,int colonne,Couleur c);
+    void reverseDiaBasDroit(int ligne,int colonne,Couleur c);
+    void reverseDiaBasGauche(int ligne,int colonne,Couleur c);
 
 
 

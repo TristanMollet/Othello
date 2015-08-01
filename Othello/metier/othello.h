@@ -5,12 +5,19 @@ class Othello
 {
 private:
     Plateau *grille;
+    Couleur courant;
 public:
     Othello();
+    ~Othello();
 
     inline Plateau * getGrille(){return grille;}
 
-    void jouerPion(Couleur c);
+    inline Couleur getCourant(){return courant;}
+
+    void play();
+
+    bool jouerPion(Couleur c);
+    void trouverGagnant();
 
 
 
