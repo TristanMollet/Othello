@@ -50,6 +50,7 @@ public:
     bool ajouterJeton(char L,int l, Couleur c);
     Couleur gagnant();
     void reverse(int ligne,int colonne, Couleur c);
+
 private:
     /*!
      * \brief lettreToInt Transforme une lettre en son chiffre correpondant pour les numeros de colonne

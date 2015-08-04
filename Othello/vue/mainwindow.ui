@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>614</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Othello</string>
+  </property>
+  <widget class="QWidget" name="centralwidget"/>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>614</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuMenu">
+    <property name="title">
+     <string>&amp;Menu</string>
+    </property>
+    <addaction name="actionNouveau"/>
+    <addaction name="action_fermer"/>
+    <addaction name="action_Quitter"/>
+   </widget>
+   <widget class="QMenu" name="menuObservateur">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="title">
+     <string>&amp;Observateur</string>
+    </property>
+    <addaction name="action_texte"/>
+    <addaction name="action_graphique"/>
+   </widget>
+   <addaction name="menuMenu"/>
+   <addaction name="menuObservateur"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionNouveau">
+   <property name="text">
+    <string>&amp;Nouveau</string>
+   </property>
+  </action>
+  <action name="action_fermer">
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>&amp;Fermer</string>
+   </property>
+  </action>
+  <action name="action_texte">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>&amp;texte</string>
+   </property>
+  </action>
+  <action name="action_graphique">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>false</bool>
+   </property>
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>&amp;graphique</string>
+   </property>
+  </action>
+  <action name="action_Quitter">
+   <property name="text">
+    <string>&amp;Quitter</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

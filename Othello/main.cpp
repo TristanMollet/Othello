@@ -1,70 +1,22 @@
 
-#include <QCoreApplication>
+#include <QApplication>
 #include "metier/plateau.h"
 #include "metier/othello.h"
+#include "vue/mainwindow.h"
 #include <iostream>
 using namespace std;
-int main()
+int main(int argc, char *argv[])
 
 {
-    Othello *ot;
-    ot=new Othello();
-    ot->play();
-//    bool placer =false;
-//    Othello *ot;
-//    ot = new Othello();
-//    cout << *ot->getGrille();
+    QApplication a(argc, argv);
+    //Othello *ot;
+    //ot=new Othello();
+    //cout << ot->afficher();
+    //    ot->play();
 
-//    ot->jouerPion(Couleur::NOIR);
-//    cout << *ot->getGrille();
 
-//    ot->jouerPion(Couleur::BLANC);
-//    cout << *ot->getGrille();
-//    ot->jouerPion(Couleur::NOIR);
-//    cout << *ot->getGrille();
 
-//    ot->jouerPion(Couleur::BLANC);
-//    cout << *ot->getGrille();
-//    ot->jouerPion(Couleur::NOIR);
-//    cout << *ot->getGrille();
-
-//    ot->jouerPion(Couleur::BLANC);
-//    cout << *ot->getGrille();
-//    ot->jouerPion(Couleur::NOIR);
-//    cout << *ot->getGrille();
-
-//    ot->jouerPion(Couleur::BLANC);
-//    cout << *ot->getGrille();
-//    ot->jouerPion(Couleur::NOIR);
-//    cout << *ot->getGrille();
-
-//    ot->jouerPion(Couleur::BLANC);
-//    cout << *ot->getGrille();
-//    ot->jouerPion(Couleur::NOIR);
-//    cout << *ot->getGrille();
-
-//    ot->jouerPion(Couleur::BLANC);
-//    cout << *ot->getGrille();
-//    ot->jouerPion(Couleur::NOIR);
-//    cout << *ot->getGrille();
-
-//    ot->jouerPion(Couleur::BLANC);
-//    cout << *ot->getGrille();
-//    ot->jouerPion(Couleur::NOIR);
-//    cout << *ot->getGrille();
-
-//    ot->jouerPion(Couleur::BLANC);
-//    cout << *ot->getGrille();
-    //    Plateau p(8,8);
-
-    //     cout << p;
-    //     p.ajouterJeton('c',5,Couleur::NOIR);
-    //     cout << p;
-    //     p.ajouterJeton('f',2,Couleur::BLANC);
-    //     cout << p;
-    //    QApplication a(argc, argv);
-    //    MainWindow w;
-    //    w.show();
-
-    //    return a.exec();
+        MainWindow windows;
+       windows.show();
+    return a.exec();
 }

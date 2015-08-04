@@ -174,18 +174,23 @@ Makefile: ../Othello/Othello.pro C:/Qt/5.5/mingw492_32/mkspecs/win32-g++/qmake.c
 		C:/Qt/5.5/mingw492_32/mkspecs/features/resolve_config.prf \
 		C:/Qt/5.5/mingw492_32/mkspecs/features/exclusive_builds_post.prf \
 		C:/Qt/5.5/mingw492_32/mkspecs/features/default_post.prf \
-		C:/Qt/5.5/mingw492_32/mkspecs/features/win32/console.prf \
 		C:/Qt/5.5/mingw492_32/mkspecs/features/win32/rtti.prf \
 		C:/Qt/5.5/mingw492_32/mkspecs/features/precompile_header.prf \
 		C:/Qt/5.5/mingw492_32/mkspecs/features/warn_on.prf \
 		C:/Qt/5.5/mingw492_32/mkspecs/features/qt.prf \
 		C:/Qt/5.5/mingw492_32/mkspecs/features/resources.prf \
 		C:/Qt/5.5/mingw492_32/mkspecs/features/moc.prf \
+		C:/Qt/5.5/mingw492_32/mkspecs/features/win32/opengl.prf \
+		C:/Qt/5.5/mingw492_32/mkspecs/features/uic.prf \
+		C:/Qt/5.5/mingw492_32/mkspecs/features/win32/windows.prf \
 		C:/Qt/5.5/mingw492_32/mkspecs/features/testcase_targets.prf \
 		C:/Qt/5.5/mingw492_32/mkspecs/features/exceptions.prf \
 		C:/Qt/5.5/mingw492_32/mkspecs/features/yacc.prf \
 		C:/Qt/5.5/mingw492_32/mkspecs/features/lex.prf \
 		../Othello/Othello.pro \
+		C:/Qt/5.5/mingw492_32/lib/qtmaind.prl \
+		C:/Qt/5.5/mingw492_32/lib/Qt5Widgets.prl \
+		C:/Qt/5.5/mingw492_32/lib/Qt5Gui.prl \
 		C:/Qt/5.5/mingw492_32/lib/Qt5Core.prl
 	$(QMAKE) -spec win32-g++ "CONFIG+=debug" -o Makefile ..\Othello\Othello.pro
 C:/Qt/5.5/mingw492_32/mkspecs/features/spec_pre.prf:
@@ -303,18 +308,23 @@ C:/Qt/5.5/mingw492_32/mkspecs/features/win32/default_pre.prf:
 C:/Qt/5.5/mingw492_32/mkspecs/features/resolve_config.prf:
 C:/Qt/5.5/mingw492_32/mkspecs/features/exclusive_builds_post.prf:
 C:/Qt/5.5/mingw492_32/mkspecs/features/default_post.prf:
-C:/Qt/5.5/mingw492_32/mkspecs/features/win32/console.prf:
 C:/Qt/5.5/mingw492_32/mkspecs/features/win32/rtti.prf:
 C:/Qt/5.5/mingw492_32/mkspecs/features/precompile_header.prf:
 C:/Qt/5.5/mingw492_32/mkspecs/features/warn_on.prf:
 C:/Qt/5.5/mingw492_32/mkspecs/features/qt.prf:
 C:/Qt/5.5/mingw492_32/mkspecs/features/resources.prf:
 C:/Qt/5.5/mingw492_32/mkspecs/features/moc.prf:
+C:/Qt/5.5/mingw492_32/mkspecs/features/win32/opengl.prf:
+C:/Qt/5.5/mingw492_32/mkspecs/features/uic.prf:
+C:/Qt/5.5/mingw492_32/mkspecs/features/win32/windows.prf:
 C:/Qt/5.5/mingw492_32/mkspecs/features/testcase_targets.prf:
 C:/Qt/5.5/mingw492_32/mkspecs/features/exceptions.prf:
 C:/Qt/5.5/mingw492_32/mkspecs/features/yacc.prf:
 C:/Qt/5.5/mingw492_32/mkspecs/features/lex.prf:
 ../Othello/Othello.pro:
+C:/Qt/5.5/mingw492_32/lib/qtmaind.prl:
+C:/Qt/5.5/mingw492_32/lib/Qt5Widgets.prl:
+C:/Qt/5.5/mingw492_32/lib/Qt5Gui.prl:
 C:/Qt/5.5/mingw492_32/lib/Qt5Core.prl:
 qmake: FORCE
 	@$(QMAKE) -spec win32-g++ "CONFIG+=debug" -o Makefile ..\Othello\Othello.pro

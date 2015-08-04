@@ -4,16 +4,16 @@
 #
 #-------------------------------------------------
 
-#QT       += core gui
-QT       += core
+QT       += core gui
+#QT       += core
 
-QT       -= gui
-#greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
+#QT       -= gui
+greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 TARGET = Othello
 
 
-CONFIG   += console
+#CONFIG   += console
 CONFIG   -= app_bundle
 
 TEMPLATE = app
@@ -21,15 +21,23 @@ TEMPLATE = app
 SOURCES += main.cpp\
     metier/plateau.cpp \
     metier/jeton.cpp \
-    metier/othello.cpp
+    metier/othello.cpp \
+    pattern/sujetdobservation.cpp \
+    vue/mainwindow.cpp \
+    vue/vuetexte.cpp
 
 HEADERS  += \
     metier/plateau.h \
     metier/Couleur.h \
     metier/jeton.h \
-    metier/othello.h
+    metier/othello.h \
+    pattern/observateur.h \
+    pattern/sujetdobservation.h \
+    vue/mainwindow.h \
+    vue/vuetexte.h
 
-#FORMS    +=
+FORMS    += \
+    vue/mainwindow.ui
 
 QMAKE_CXXFLAGS += -std=c++11 -pedantic-errors
 

@@ -14,6 +14,7 @@ Othello::Othello()
     //grille->ajouterJeton('e',5,Couleur::BLANC);
 
     courant = Couleur::NOIR;
+    notifierChangement();
 }
 
 Othello::~Othello()
@@ -28,7 +29,7 @@ void Othello::play()
         std::cout<<*grille;
         bool pionJoue = false;
         while (!pionJoue) {
-            pionJoue = jouerPion(courant);
+            //pionJoue = jouerPion(courant);
 
         }
         if(pionJoue){
@@ -45,17 +46,41 @@ void Othello::play()
     }
 }
 
-bool Othello::jouerPion(Couleur c)
+string Othello::afficher()
 {
-    cout << "Entree la lettre de la colonne :" << endl;
-    char l;
-    cin >>l;
+    std::string st;
+    int nb =1;
+    st.append("<b> --A---B---C---D---E---F---G---H--</b>");
+    st.append("<br>");
+    for (int i = 0 ; i< grille->getLargeur();i++){
+        st.append(std::to_string(nb++));
+        st.append(" <b> | </b> ");
+        for(int j = 0 ;j<grille->getLongueur();j++){
+            st.append(grille->getPlateau()[i][j]->toString());
+            st.append(" <b> | </b>");
+        }
+        st.append("<br>");
+        st.append("<b>--------------------------------------</b>");
+        st.append("<br>");
 
-    cout << "Entree le numero de ligne: " << endl;
+    }
+    return st;
+}
 
-    int ligne;
-    cin >> ligne;
-    return grille->ajouterJeton(l,ligne,c);
+bool Othello::jouerPion(char l,int ligne,Couleur c)
+{
+//    cout << "Entree la lettre de la colonne :" << endl;
+//    char l;
+//    cin >>l;
+
+//    cout << "Entree le numero de ligne: " << endl;
+
+//    int ligne;
+//    cin >> ligne;
+    notifierChangement();
+    bool ajouter =grille->ajouterJeton(l,ligne,c);
+    notifierChangement();
+    return ajouter;
 }
 
 void Othello::trouverGagnant()

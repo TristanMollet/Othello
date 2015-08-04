@@ -28,6 +28,7 @@ public:
      * \param c La nouvelle couleur du jeton.
      */
     inline void setCouleur(Couleur c){couleur = c;}
+    std::string toString();
 
     friend std::ostream& operator<<( std::ostream &flux, Jeton const& jeton);
 

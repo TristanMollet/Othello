@@ -1,7 +1,8 @@
 #ifndef OTHELLO_H
 #define OTHELLO_H
 #include "plateau.h"
-class Othello
+#include "pattern/sujetdobservation.h"
+class Othello : public SujetDObservation
 {
 private:
     Plateau *grille;
@@ -15,8 +16,8 @@ public:
     inline Couleur getCourant(){return courant;}
 
     void play();
-
-    bool jouerPion(Couleur c);
+    std::string afficher();
+    bool jouerPion(char l, int ligne, Couleur c);
     void trouverGagnant();
 
 
