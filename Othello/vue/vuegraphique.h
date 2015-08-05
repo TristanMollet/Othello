@@ -1,11 +1,12 @@
 #ifndef VUEGRAPHIQUE_H
 #define VUEGRAPHIQUE_H
 
-#include <QWidget>
+#include <QGraphicsView>
+#include <QGraphicsScene>
 #include "pattern/observateur.h"
 #include "metier/othello.h"
 
-class VueGraphique : public QWidget, public Observateur
+class VueGraphique : public QGraphicsView, public Observateur
 {
     Q_OBJECT
 public:
@@ -14,7 +15,7 @@ public:
     ~VueGraphique();
 private:
     Othello * othello;
-
+    QGraphicsScene * maScene;
 
 signals:
 

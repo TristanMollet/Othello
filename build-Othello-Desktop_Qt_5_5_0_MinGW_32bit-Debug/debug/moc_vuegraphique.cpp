@@ -61,7 +61,7 @@ void VueGraphique::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id
 }
 
 const QMetaObject VueGraphique::staticMetaObject = {
-    { &QWidget::staticMetaObject, qt_meta_stringdata_VueGraphique.data,
+    { &QGraphicsView::staticMetaObject, qt_meta_stringdata_VueGraphique.data,
       qt_meta_data_VueGraphique,  qt_static_metacall, Q_NULLPTR, Q_NULLPTR}
 };
 
@@ -78,12 +78,12 @@ void *VueGraphique::qt_metacast(const char *_clname)
         return static_cast<void*>(const_cast< VueGraphique*>(this));
     if (!strcmp(_clname, "Observateur"))
         return static_cast< Observateur*>(const_cast< VueGraphique*>(this));
-    return QWidget::qt_metacast(_clname);
+    return QGraphicsView::qt_metacast(_clname);
 }
 
 int VueGraphique::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 {
-    _id = QWidget::qt_metacall(_c, _id, _a);
+    _id = QGraphicsView::qt_metacall(_c, _id, _a);
     if (_id < 0)
         return _id;
     return _id;
