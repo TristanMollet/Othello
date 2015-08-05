@@ -7,6 +7,7 @@ class Othello : public SujetDObservation
 private:
     Plateau *grille;
     Couleur courant;
+    int pionRestant;
 public:
     Othello();
     ~Othello();
@@ -14,11 +15,12 @@ public:
     inline Plateau * getGrille(){return grille;}
 
     inline Couleur getCourant(){return courant;}
+    inline int getPionRrestant(){return pionRestant;}
 
     void play();
     std::string afficher();
-    bool jouerPion(char l, int ligne, Couleur c);
-    void trouverGagnant();
+    bool jouerPion(std::string l, int ligne, Couleur c);
+    std::string trouverGagnant();
 
 
 

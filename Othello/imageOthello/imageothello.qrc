@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/">
+        <file>Blanc.jpg</file>
+        <file>Noir.jpg</file>
+        <file>vide.jpg</file>
+    </qresource>
+</RCC>

@@ -3,6 +3,7 @@
 using namespace std;
 Othello::Othello()
 {
+    pionRestant=64;
     grille = new Plateau();
     grille->getPlateau()[3][4]->setCouleur(Couleur::NOIR);
     //grille->ajouterJeton('e',4,Couleur::NOIR);
@@ -14,7 +15,7 @@ Othello::Othello()
     //grille->ajouterJeton('e',5,Couleur::BLANC);
 
     courant = Couleur::NOIR;
-    notifierChangement();
+    SujetDObservation::notifierChangement();
 }
 
 Othello::~Othello()
@@ -67,7 +68,7 @@ string Othello::afficher()
     return st;
 }
 
-bool Othello::jouerPion(char l,int ligne,Couleur c)
+bool Othello::jouerPion(std::string l,int ligne,Couleur c)
 {
 //    cout << "Entree la lettre de la colonne :" << endl;
 //    char l;
@@ -77,18 +78,28 @@ bool Othello::jouerPion(char l,int ligne,Couleur c)
 
 //    int ligne;
 //    cin >> ligne;
-    notifierChangement();
+
     bool ajouter =grille->ajouterJeton(l,ligne,c);
+    if(ajouter){
+        pionRestant -=1;
+        if(courant == Couleur::NOIR){
+            courant = Couleur::BLANC;
+        }else{
+            courant = Couleur::NOIR;
+        }
+    }
     notifierChangement();
     return ajouter;
 }
 
-void Othello::trouverGagnant()
+std::string Othello::trouverGagnant()
 {
+    std::string gag;
     Couleur gagnant = grille->gagnant();
     if(gagnant == Couleur::NOIR){
-        std::cout<<"Le joueur noir a gagne"<<std::endl;
+        gag="Le joueur noir a gagne";
     }else{
-        std::cout<<"Le joueur blanc a gagne"<<std::endl;
+        gag="Le joueur blanc a gagne";
     }
+    return gag;
 }

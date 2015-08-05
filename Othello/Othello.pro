@@ -24,7 +24,8 @@ SOURCES += main.cpp\
     metier/othello.cpp \
     pattern/sujetdobservation.cpp \
     vue/mainwindow.cpp \
-    vue/vuetexte.cpp
+    vue/vuetexte.cpp \
+    vue/vuegraphique.cpp
 
 HEADERS  += \
     metier/plateau.h \
@@ -34,12 +35,16 @@ HEADERS  += \
     pattern/observateur.h \
     pattern/sujetdobservation.h \
     vue/mainwindow.h \
-    vue/vuetexte.h
+    vue/vuetexte.h \
+    vue/vuegraphique.h
 
 FORMS    += \
     vue/mainwindow.ui
 
 QMAKE_CXXFLAGS += -std=c++11 -pedantic-errors
+
+RESOURCES += \
+    imageOthello/imageothello.qrc
 
 
 

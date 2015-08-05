@@ -47,7 +47,7 @@ public:
      * \param c la couleur du jeton
      * \return
      */
-    bool ajouterJeton(char L,int l, Couleur c);
+    bool ajouterJeton(std::string L, int l, Couleur c);
     Couleur gagnant();
     void reverse(int ligne,int colonne, Couleur c);
 
@@ -57,7 +57,7 @@ private:
      * \param c la lettre
      * \return un entier positif si la lettre est correct, -1 si la lettre est mauvaise.
      */
-    int lettreToInt(char c);
+    int lettreToInt(std::string c);
 
     bool verifierPosition(int ligne,int colonne);
     bool verifNormal(int ligne,int colonne);

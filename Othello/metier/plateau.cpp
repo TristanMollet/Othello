@@ -1,4 +1,6 @@
 #include "plateau.h"
+#include <algorithm>
+#include <string>
 #include <iostream>
 Plateau::Plateau(int largeur, int longueur)
 {
@@ -12,7 +14,7 @@ Plateau::Plateau(int largeur, int longueur)
 
 }
 
-bool Plateau::ajouterJeton(char L, int l, Couleur c)
+bool Plateau::ajouterJeton(std::string L, int l, Couleur c)
 {
     bool placer =false;
     int colonne = lettreToInt(L);
@@ -174,38 +176,56 @@ void Plateau::reverseDiaBasGauche(int ligne,int colonne,Couleur c){
     }
 }
 
-int Plateau::lettreToInt(char c)
+int Plateau::lettreToInt(std::string c)
 {
+    std::transform(c.begin(),c.end(),c.begin(),::tolower);
     int nb = 0;
-    switch (c) {
-    case 'a':
+    if(c=="a"){
         nb =0;
-        break;
-    case 'b':
-        nb = 1;
-        break;
-    case 'c':
-        nb = 2;
-        break;
-    case 'd':
-        nb = 3;
-        break;
-    case 'e':
-        nb = 4;
-        break;
-    case 'f':
-        nb = 5;
-        break;
-    case 'g':
-        nb =6;
-        break;
-    case 'h':
-        nb =7;
-        break;
-    default:
-        nb = -1;
-        break;
+    }else if(c=="b"){
+        nb =1;
+    }else if(c=="c"){
+        nb=2;
+    }else if(c=="d"){
+        nb=3;
+    }else if(c=="e"){
+        nb=4;
+    }else if(c=="f"){
+        nb =5;
+    }else if(c=="g"){
+        nb=6;
+    }else if(c=="h"){
+        nb=7;
     }
+//    switch (c) {
+//    case "a":
+//        nb =0;
+//        break;
+//    case "b":
+//        nb = 1;
+//        break;
+//    case "c":
+//        nb = 2;
+//        break;
+//    case "d":
+//        nb = 3;
+//        break;
+//    case "e":
+//        nb = 4;
+//        break;
+//    case "f":
+//        nb = 5;
+//        break;
+//    case "g":
+//        nb =6;
+//        break;
+//    case "h":
+//        nb =7;
+//        break;
+//    default:
+//        nb = -1;
+//        break;
+//    }
     return nb;
 }
 bool Plateau::verifNormal(int ligne,int colonne){

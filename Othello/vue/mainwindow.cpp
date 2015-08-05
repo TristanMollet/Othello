@@ -1,11 +1,11 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
-
+#include <iostream>
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
 {
-    vuetxt =nullptr;
+
     ui->setupUi(this);
     connexion();
 
@@ -16,6 +16,7 @@ MainWindow::~MainWindow()
     delete ui;
     delete othello;
     delete vuetxt;
+    delete vueGraph;
 }
 
 void MainWindow::connexion()
@@ -35,7 +36,8 @@ void MainWindow::connexion()
 void MainWindow::creerPartie()
 {
     othello = new Othello();
-
+    vuetxt = nullptr;
+    vueGraph = nullptr;
     ui->menuObservateur->setEnabled(true);
     ui->action_texte->setEnabled(true);
     ui->action_graphique->setEnabled(true);
@@ -47,6 +49,8 @@ void MainWindow::fermerPartie()
 {
     delete othello;
     othello = nullptr;
+    delete vuetxt;
+    vuetxt = nullptr;
     ui->actionNouveau->setEnabled(true);
     ui->menuObservateur->setEnabled(false);
     ui->action_fermer->setEnabled(false);
@@ -54,14 +58,24 @@ void MainWindow::fermerPartie()
 
 void MainWindow::vueGraphique(bool actif)
 {
-
+    if(actif){
+       if(vueGraph == nullptr){
+           vueGraph = new VueGraphique(othello,this);
+       }
+       setCentralWidget(vueGraph);
+       vueGraph->show();
+    }else{
+        if(vueGraph != nullptr){
+            vueGraph->hide();
+        }
+    }
 }
 
 void MainWindow::vueTexte(bool actif)
 {
     if(actif){
         if(vuetxt == nullptr){
-            vuetxt = new VueTexte(othello);
+            vuetxt = new VueTexte(othello,this);
 
         }
         setCentralWidget(vuetxt);
@@ -72,3 +86,5 @@ void MainWindow::vueTexte(bool actif)
         }
     }
 }
+
+

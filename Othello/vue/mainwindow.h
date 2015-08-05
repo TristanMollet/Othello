@@ -4,7 +4,7 @@
 #include <QMainWindow>
 #include "metier/othello.h"
 #include "vue/vuetexte.h"
-
+#include "vue/vuegraphique.h"
 namespace Ui {
 class MainWindow;
 }
@@ -27,7 +27,7 @@ private:
     Ui::MainWindow *ui;
     Othello *othello;
     VueTexte *vuetxt;
-
+    VueGraphique * vueGraph;
 
 
 };
