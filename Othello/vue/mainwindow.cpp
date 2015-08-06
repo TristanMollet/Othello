@@ -31,6 +31,7 @@ void MainWindow::connexion()
             this, &MainWindow::vueGraphique);
     connect(ui->action_texte, &QAction::toggled,
             this, &MainWindow::vueTexte);
+
 }
 
 void MainWindow::creerPartie()
@@ -58,27 +59,38 @@ void MainWindow::fermerPartie()
 
 void MainWindow::vueGraphique(bool actif)
 {
+    if(ui->action_texte->isChecked()){
+        ui->action_texte->setChecked(false);
+        ui->action_graphique->setChecked(true);
+    }
     if(actif){
        if(vueGraph == nullptr){
            vueGraph = new VueGraphique(othello,this);
        }
-       setCentralWidget(vueGraph);
+      // setCentralWidget(vueGraph);
+       ui->layGraph->addWidget(vueGraph);
        vueGraph->show();
     }else{
         if(vueGraph != nullptr){
             vueGraph->hide();
+
         }
     }
 }
 
 void MainWindow::vueTexte(bool actif)
 {
+    if(ui->action_graphique->isChecked()){
+        ui->action_graphique->setChecked(false);
+        ui->action_graphique->setChecked(true);
+    }
     if(actif){
         if(vuetxt == nullptr){
             vuetxt = new VueTexte(othello,this);
 
         }
-        setCentralWidget(vuetxt);
+        ui->layTxt->addWidget(vuetxt);
+        //setCentralWidget(vuetxt);
         vuetxt->show();
     }else{
         if(vuetxt != nullptr){

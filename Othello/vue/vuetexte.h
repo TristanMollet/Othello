@@ -21,7 +21,7 @@ private:
     QComboBox *ligne;
     QLabel *label;
     QLabel *courant;
-private slots:
+public slots:
     void clicJouer();
 
 };

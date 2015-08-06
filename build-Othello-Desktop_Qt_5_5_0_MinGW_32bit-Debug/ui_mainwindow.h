@@ -18,6 +18,7 @@
 #include <QtWidgets/QMenu>
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QStatusBar>
+#include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -31,6 +32,10 @@ public:
     QAction *action_graphique;
     QAction *action_Quitter;
     QWidget *centralwidget;
+    QWidget *verticalLayoutWidget;
+    QVBoxLayout *layGraph;
+    QWidget *verticalLayoutWidget_2;
+    QVBoxLayout *layTxt;
     QMenuBar *menubar;
     QMenu *menuMenu;
     QMenu *menuObservateur;
@@ -40,7 +45,7 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QStringLiteral("MainWindow"));
-        MainWindow->resize(614, 600);
+        MainWindow->resize(807, 482);
         actionNouveau = new QAction(MainWindow);
         actionNouveau->setObjectName(QStringLiteral("actionNouveau"));
         action_fermer = new QAction(MainWindow);
@@ -60,10 +65,22 @@ public:
         action_Quitter->setObjectName(QStringLiteral("action_Quitter"));
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName(QStringLiteral("centralwidget"));
+        verticalLayoutWidget = new QWidget(centralwidget);
+        verticalLayoutWidget->setObjectName(QStringLiteral("verticalLayoutWidget"));
+        verticalLayoutWidget->setGeometry(QRect(0, 0, 421, 441));
+        layGraph = new QVBoxLayout(verticalLayoutWidget);
+        layGraph->setObjectName(QStringLiteral("layGraph"));
+        layGraph->setContentsMargins(0, 0, 0, 0);
+        verticalLayoutWidget_2 = new QWidget(centralwidget);
+        verticalLayoutWidget_2->setObjectName(QStringLiteral("verticalLayoutWidget_2"));
+        verticalLayoutWidget_2->setGeometry(QRect(440, 0, 361, 441));
+        layTxt = new QVBoxLayout(verticalLayoutWidget_2);
+        layTxt->setObjectName(QStringLiteral("layTxt"));
+        layTxt->setContentsMargins(0, 0, 0, 0);
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QStringLiteral("menubar"));
-        menubar->setGeometry(QRect(0, 0, 614, 21));
+        menubar->setGeometry(QRect(0, 0, 807, 21));
         menuMenu = new QMenu(menubar);
         menuMenu->setObjectName(QStringLiteral("menuMenu"));
         menuObservateur = new QMenu(menubar);
