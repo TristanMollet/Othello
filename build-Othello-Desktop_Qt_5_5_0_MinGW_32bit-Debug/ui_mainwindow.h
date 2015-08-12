@@ -45,7 +45,7 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QStringLiteral("MainWindow"));
-        MainWindow->resize(807, 482);
+        MainWindow->resize(807, 500);
         actionNouveau = new QAction(MainWindow);
         actionNouveau->setObjectName(QStringLiteral("actionNouveau"));
         action_fermer = new QAction(MainWindow);
@@ -67,13 +67,13 @@ public:
         centralwidget->setObjectName(QStringLiteral("centralwidget"));
         verticalLayoutWidget = new QWidget(centralwidget);
         verticalLayoutWidget->setObjectName(QStringLiteral("verticalLayoutWidget"));
-        verticalLayoutWidget->setGeometry(QRect(0, 0, 421, 441));
+        verticalLayoutWidget->setGeometry(QRect(0, 0, 461, 451));
         layGraph = new QVBoxLayout(verticalLayoutWidget);
         layGraph->setObjectName(QStringLiteral("layGraph"));
         layGraph->setContentsMargins(0, 0, 0, 0);
         verticalLayoutWidget_2 = new QWidget(centralwidget);
         verticalLayoutWidget_2->setObjectName(QStringLiteral("verticalLayoutWidget_2"));
-        verticalLayoutWidget_2->setGeometry(QRect(440, 0, 361, 441));
+        verticalLayoutWidget_2->setGeometry(QRect(470, 0, 331, 451));
         layTxt = new QVBoxLayout(verticalLayoutWidget_2);
         layTxt->setObjectName(QStringLiteral("layTxt"));
         layTxt->setContentsMargins(0, 0, 0, 0);

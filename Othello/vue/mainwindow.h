@@ -2,9 +2,10 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QGraphicsView>
 #include "metier/othello.h"
 #include "vue/vuetexte.h"
-#include "vue/vuegraphique.h"
+#include "vue/mascene.h"
 namespace Ui {
 class MainWindow;
 }
@@ -27,7 +28,8 @@ private:
     Ui::MainWindow *ui;
     Othello *othello;
     VueTexte *vuetxt;
-    VueGraphique * vueGraph;
+    maScene * scene;
+    QGraphicsView * vueGraph;
 
 
 };

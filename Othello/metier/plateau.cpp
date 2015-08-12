@@ -27,6 +27,18 @@ bool Plateau::ajouterJeton(std::string L, int l, Couleur c)
     return placer;
 }
 
+bool Plateau::ajouterJeton(int ligne, int colonne, Couleur c)
+{
+    bool placer = false;
+    if(colonne >=0 && colonne < 8 && verifierPosition(ligne,colonne)){
+        plateau[ligne][colonne]->setCouleur(c);
+        placer = true;
+        reverse(ligne,colonne,c);
+    }
+    return placer;
+
+}
+
 Couleur Plateau::gagnant()
 {
     int nbNoir =0;

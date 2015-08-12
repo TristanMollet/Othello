@@ -16,7 +16,7 @@ MainWindow::~MainWindow()
     delete ui;
     delete othello;
     delete vuetxt;
-    delete vueGraph;
+    delete scene;
 }
 
 void MainWindow::connexion()
@@ -38,7 +38,7 @@ void MainWindow::creerPartie()
 {
     othello = new Othello();
     vuetxt = nullptr;
-    vueGraph = nullptr;
+    scene = nullptr;
     ui->menuObservateur->setEnabled(true);
     ui->action_texte->setEnabled(true);
     ui->action_graphique->setEnabled(true);
@@ -64,8 +64,9 @@ void MainWindow::vueGraphique(bool actif)
         ui->action_graphique->setChecked(true);
     }
     if(actif){
-       if(vueGraph == nullptr){
-           vueGraph = new VueGraphique(othello,this);
+       if(scene == nullptr){
+           scene = new maScene(othello,this);
+           vueGraph = new QGraphicsView(scene,this);
        }
       // setCentralWidget(vueGraph);
        ui->layGraph->addWidget(vueGraph);

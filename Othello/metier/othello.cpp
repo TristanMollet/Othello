@@ -68,6 +68,21 @@ string Othello::afficher()
     return st;
 }
 
+bool Othello::jouerPion(int ligne, int colonne)
+{
+    bool ajouter =grille->ajouterJeton(ligne,colonne,courant);
+    if(ajouter){
+        pionRestant -=1;
+        if(courant == Couleur::NOIR){
+            courant = Couleur::BLANC;
+        }else{
+            courant = Couleur::NOIR;
+        }
+    }
+    notifierChangement();
+    return ajouter;
+}
+
 bool Othello::jouerPion(std::string l,int ligne,Couleur c)
 {
 //    cout << "Entree la lettre de la colonne :" << endl;

@@ -6,9 +6,9 @@ INPUT(
 ./debug\sujetdobservation.o
 ./debug\mainwindow.o
 ./debug\vuetexte.o
-./debug\vuegraphique.o
+./debug\monitem.o
+./debug\mascene.o
 ./debug\qrc_imageothello.o
 ./debug\moc_mainwindow.o
 ./debug\moc_vuetexte.o
-./debug\moc_vuegraphique.o
 );

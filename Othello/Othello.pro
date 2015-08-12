@@ -25,7 +25,8 @@ SOURCES += main.cpp\
     pattern/sujetdobservation.cpp \
     vue/mainwindow.cpp \
     vue/vuetexte.cpp \
-    vue/vuegraphique.cpp
+    vue/monitem.cpp \
+    vue/mascene.cpp
 
 HEADERS  += \
     metier/plateau.h \
@@ -36,7 +37,8 @@ HEADERS  += \
     pattern/sujetdobservation.h \
     vue/mainwindow.h \
     vue/vuetexte.h \
-    vue/vuegraphique.h
+    vue/monitem.h \
+    vue/mascene.h
 
 FORMS    += \
     vue/mainwindow.ui

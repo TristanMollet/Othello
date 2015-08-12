@@ -19,6 +19,7 @@ public:
 
     void play();
     std::string afficher();
+    bool jouerPion(int ligne, int colonne);
     bool jouerPion(std::string l, int ligne, Couleur c);
     std::string trouverGagnant();
 

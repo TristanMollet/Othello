@@ -48,6 +48,7 @@ public:
      * \return
      */
     bool ajouterJeton(std::string L, int l, Couleur c);
+    bool ajouterJeton(int ligne, int colonne, Couleur c);
     Couleur gagnant();
     void reverse(int ligne,int colonne, Couleur c);
 
