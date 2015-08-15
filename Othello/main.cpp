@@ -4,6 +4,7 @@
 #include "metier/othello.h"
 #include "vue/mainwindow.h"
 #include <iostream>
+#include <QGridLayout>
 using namespace std;
 int main(int argc, char *argv[])
 
@@ -13,7 +14,6 @@ int main(int argc, char *argv[])
     //ot=new Othello();
     //cout << ot->afficher();
     //    ot->play();
-
 
 
     MainWindow windows;

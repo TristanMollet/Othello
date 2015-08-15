@@ -3,7 +3,7 @@
 using namespace std;
 Othello::Othello()
 {
-    pionRestant=64;
+    pionRestant=60;
     grille = new Plateau();
     grille->getPlateau()[3][4]->setCouleur(Couleur::NOIR);
     //grille->ajouterJeton('e',4,Couleur::NOIR);
@@ -106,6 +106,7 @@ bool Othello::jouerPion(std::string l,int ligne,Couleur c)
     notifierChangement();
     return ajouter;
 }
+
 
 std::string Othello::trouverGagnant()
 {
