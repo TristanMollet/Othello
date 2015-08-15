@@ -59,44 +59,41 @@ void MainWindow::fermerPartie()
 
 void MainWindow::vueGraphique(bool actif)
 {
-    if(ui->action_texte->isChecked()){
-        ui->action_texte->setChecked(false);
-        ui->action_graphique->setChecked(true);
+    //    if(ui->action_texte->isChecked()){
+    //        ui->action_texte->setChecked(false);
+    //        ui->action_graphique->setChecked(true);
+    //    }
+    if(scene == nullptr){
+        scene = new maScene(othello,this);
+        vueGraph = new QGraphicsView(scene,this);
     }
     if(actif){
-       if(scene == nullptr){
-           scene = new maScene(othello,this);
-           vueGraph = new QGraphicsView(scene,this);
-       }
-      // setCentralWidget(vueGraph);
-       ui->layGraph->addWidget(vueGraph);
-       vueGraph->show();
-    }else{
-        if(vueGraph != nullptr){
-            vueGraph->hide();
 
-        }
+        // setCentralWidget(vueGraph);
+        ui->layGraph->addWidget(vueGraph);
+        vueGraph->show();
+    }else{
+        vueGraph->hide();
     }
 }
 
 void MainWindow::vueTexte(bool actif)
 {
-    if(ui->action_graphique->isChecked()){
-        ui->action_graphique->setChecked(false);
-        ui->action_graphique->setChecked(true);
+    //    if(ui->action_graphique->isChecked()){
+    //        ui->action_graphique->setChecked(false);
+    //        ui->action_graphique->setChecked(true);
+    //    }
+    if(vuetxt == nullptr){
+        vuetxt = new VueTexte(othello,this);
+
     }
     if(actif){
-        if(vuetxt == nullptr){
-            vuetxt = new VueTexte(othello,this);
 
-        }
         ui->layTxt->addWidget(vuetxt);
         //setCentralWidget(vuetxt);
         vuetxt->show();
     }else{
-        if(vuetxt != nullptr){
-            vuetxt->hide();
-        }
+        vuetxt->hide();
     }
 }
 
