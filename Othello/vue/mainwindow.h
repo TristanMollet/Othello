@@ -10,11 +10,18 @@ namespace Ui {
 class MainWindow;
 }
 
+/*!
+ * \brief The MainWindow class
+ */
 class MainWindow : public QMainWindow
 {
     Q_OBJECT
 
 public:
+    /*!
+     * \brief MainWindow creer une instance de MainWindow
+     * \param parent l'objet parent
+     */
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
 private:

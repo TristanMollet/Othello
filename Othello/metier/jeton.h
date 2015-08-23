@@ -28,8 +28,19 @@ public:
      * \param c La nouvelle couleur du jeton.
      */
     inline void setCouleur(Couleur c){couleur = c;}
+
+    /*!
+     * \brief toString
+     * \return l'objet sous forme de string
+     */
     std::string toString();
 
+    /*!
+     * \brief operator << Redefinit l'operateur de flux
+     * \param flux le flux de base
+     * \param jeton l'objet a transmettre
+     * \return l'objet sous forme de flux
+     */
     friend std::ostream& operator<<( std::ostream &flux, Jeton const& jeton);
 
 };

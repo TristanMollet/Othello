@@ -44,12 +44,29 @@ public:
      * \brief ajouterJeton
      * \param L la lettre de la colonne
      * \param l le numéro de ligne
-     * \param c la couleur du jeton
+     * \param c la couleur du joueur
      * \return
      */
     bool ajouterJeton(std::string L, int l, Couleur c);
+    /*!
+     * \brief ajouterJeton surdefinition de ajouterJeton
+     * \param ligne
+     * \param colonne
+     * \param c la couleur du joueur
+     * \return
+     */
     bool ajouterJeton(int ligne, int colonne, Couleur c);
+    /*!
+     * \brief gagnant trouve le gagnant
+     * \return la couleur du gagnant
+     */
     Couleur gagnant();
+    /*!
+     * \brief reverse fonction qui modifie en renversant les jeton suivant les conditions du jeux
+     * \param ligne ligne de depart
+     * \param colonne colonne de depart
+     * \param c couleur du joueur courant
+     */
     void reverse(int ligne,int colonne, Couleur c);
 
 private:

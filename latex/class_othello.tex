@@ -1,0 +1,170 @@
+\hypertarget{class_othello}{}\section{Othello Class Reference}
+\label{class_othello}\index{Othello@{Othello}}
+
+
+The \hyperlink{class_othello}{Othello} class Classe metier reprensentant le jeu.  
+
+
+
+
+{\ttfamily \#include $<$othello.\+h$>$}
+
+Inheritance diagram for Othello\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_othello}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_othello_a66e89bf891e08ed03c257c87fb9be524}{}\hyperlink{class_othello_a66e89bf891e08ed03c257c87fb9be524}{Othello} ()\label{class_othello_a66e89bf891e08ed03c257c87fb9be524}
+
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_othello}{Othello} constuit le jeu. \end{DoxyCompactList}\item 
+\hyperlink{class_plateau}{Plateau} $\ast$ \hyperlink{class_othello_a0085465c6175a1230f2136078d7004cf}{get\+Grille} ()
+\begin{DoxyCompactList}\small\item\em get\+Grille Donne la grille de jeu \end{DoxyCompactList}\item 
+Couleur \hyperlink{class_othello_afdd6f9f72d565f9c45506f584c8077cb}{get\+Courant} ()
+\begin{DoxyCompactList}\small\item\em get\+Courant Donne la couleur du joueur courant \end{DoxyCompactList}\item 
+int \hyperlink{class_othello_a72ee1241f1a2c2d5eccbc3fe0938faa3}{get\+Pion\+Rrestant} ()
+\begin{DoxyCompactList}\small\item\em get\+Pion\+Rrestant Donne le nombre de jetons restant \end{DoxyCompactList}\item 
+\hypertarget{class_othello_a3376b9dd57d213bcb93ae0ee50c9c994}{}void \hyperlink{class_othello_a3376b9dd57d213bcb93ae0ee50c9c994}{play} ()\label{class_othello_a3376b9dd57d213bcb93ae0ee50c9c994}
+
+\begin{DoxyCompactList}\small\item\em play Permet de lancer le jeu en console \end{DoxyCompactList}\item 
+std\+::string \hyperlink{class_othello_ab9aeb646966e57f9db61b890fd4ecf79}{afficher} ()
+\begin{DoxyCompactList}\small\item\em afficher affiche la grille \end{DoxyCompactList}\item 
+bool \hyperlink{class_othello_ad193a2c07618fdd73d3c26c972a6bd50}{jouer\+Pion} (int ligne, int colonne)
+\begin{DoxyCompactList}\small\item\em jouer\+Pion permet de jouer un jeton \end{DoxyCompactList}\item 
+bool \hyperlink{class_othello_a4a2cf5c472f95c2fb84f63f4f1c50e66}{jouer\+Pion} (std\+::string l, int ligne, Couleur c)
+\begin{DoxyCompactList}\small\item\em jouer\+Pion permet de joueur un jeton \end{DoxyCompactList}\item 
+std\+::string \hyperlink{class_othello_a6aef7801395d5073ede14fda239450b0}{trouver\+Gagnant} ()
+\begin{DoxyCompactList}\small\item\em trouver\+Gagnant cherche le gagnant \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+The \hyperlink{class_othello}{Othello} class Classe metier reprensentant le jeu. 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_othello_ab9aeb646966e57f9db61b890fd4ecf79}{}\index{Othello@{Othello}!afficher@{afficher}}
+\index{afficher@{afficher}!Othello@{Othello}}
+\subsubsection[{afficher()}]{\setlength{\rightskip}{0pt plus 5cm}string Othello\+::afficher (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_othello_ab9aeb646966e57f9db61b890fd4ecf79}
+
+
+afficher affiche la grille 
+
+\begin{DoxyReturn}{Returns}
+la grille en string 
+\end{DoxyReturn}
+\hypertarget{class_othello_afdd6f9f72d565f9c45506f584c8077cb}{}\index{Othello@{Othello}!get\+Courant@{get\+Courant}}
+\index{get\+Courant@{get\+Courant}!Othello@{Othello}}
+\subsubsection[{get\+Courant()}]{\setlength{\rightskip}{0pt plus 5cm}Couleur Othello\+::get\+Courant (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_othello_afdd6f9f72d565f9c45506f584c8077cb}
+
+
+get\+Courant Donne la couleur du joueur courant 
+
+\begin{DoxyReturn}{Returns}
+la couleur du joueur courant 
+\end{DoxyReturn}
+\hypertarget{class_othello_a0085465c6175a1230f2136078d7004cf}{}\index{Othello@{Othello}!get\+Grille@{get\+Grille}}
+\index{get\+Grille@{get\+Grille}!Othello@{Othello}}
+\subsubsection[{get\+Grille()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Plateau}$\ast$ Othello\+::get\+Grille (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_othello_a0085465c6175a1230f2136078d7004cf}
+
+
+get\+Grille Donne la grille de jeu 
+
+\begin{DoxyReturn}{Returns}
+la grille de jeu 
+\end{DoxyReturn}
+\hypertarget{class_othello_a72ee1241f1a2c2d5eccbc3fe0938faa3}{}\index{Othello@{Othello}!get\+Pion\+Rrestant@{get\+Pion\+Rrestant}}
+\index{get\+Pion\+Rrestant@{get\+Pion\+Rrestant}!Othello@{Othello}}
+\subsubsection[{get\+Pion\+Rrestant()}]{\setlength{\rightskip}{0pt plus 5cm}int Othello\+::get\+Pion\+Rrestant (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_othello_a72ee1241f1a2c2d5eccbc3fe0938faa3}
+
+
+get\+Pion\+Rrestant Donne le nombre de jetons restant 
+
+\begin{DoxyReturn}{Returns}
+le nombre de jeton restant 
+\end{DoxyReturn}
+\hypertarget{class_othello_ad193a2c07618fdd73d3c26c972a6bd50}{}\index{Othello@{Othello}!jouer\+Pion@{jouer\+Pion}}
+\index{jouer\+Pion@{jouer\+Pion}!Othello@{Othello}}
+\subsubsection[{jouer\+Pion(int ligne, int colonne)}]{\setlength{\rightskip}{0pt plus 5cm}bool Othello\+::jouer\+Pion (
+\begin{DoxyParamCaption}
+\item[{int}]{ligne, }
+\item[{int}]{colonne}
+\end{DoxyParamCaption}
+)}\label{class_othello_ad193a2c07618fdd73d3c26c972a6bd50}
+
+
+jouer\+Pion permet de jouer un jeton 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ligne} & \\
+\hline
+{\em colonne} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true si le jeton a ete jouer 
+\end{DoxyReturn}
+\hypertarget{class_othello_a4a2cf5c472f95c2fb84f63f4f1c50e66}{}\index{Othello@{Othello}!jouer\+Pion@{jouer\+Pion}}
+\index{jouer\+Pion@{jouer\+Pion}!Othello@{Othello}}
+\subsubsection[{jouer\+Pion(std\+::string l, int ligne, Couleur c)}]{\setlength{\rightskip}{0pt plus 5cm}bool Othello\+::jouer\+Pion (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{l, }
+\item[{int}]{ligne, }
+\item[{Couleur}]{c}
+\end{DoxyParamCaption}
+)}\label{class_othello_a4a2cf5c472f95c2fb84f63f4f1c50e66}
+
+
+jouer\+Pion permet de joueur un jeton 
+
+
+\begin{DoxyParams}{Parameters}
+{\em l} & la colonne \\
+\hline
+{\em ligne} & \\
+\hline
+{\em c} & couleur a jouer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true si le jeton est jouer 
+\end{DoxyReturn}
+\hypertarget{class_othello_a6aef7801395d5073ede14fda239450b0}{}\index{Othello@{Othello}!trouver\+Gagnant@{trouver\+Gagnant}}
+\index{trouver\+Gagnant@{trouver\+Gagnant}!Othello@{Othello}}
+\subsubsection[{trouver\+Gagnant()}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Othello\+::trouver\+Gagnant (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_othello_a6aef7801395d5073ede14fda239450b0}
+
+
+trouver\+Gagnant cherche le gagnant 
+
+\begin{DoxyReturn}{Returns}
+le gagnant 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Tritan/\+Documents/\+Git\+Hub/\+Othello/\+Othello/metier/othello.\+h\item 
+C\+:/\+Users/\+Tritan/\+Documents/\+Git\+Hub/\+Othello/\+Othello/metier/othello.\+cpp\end{DoxyCompactItemize}

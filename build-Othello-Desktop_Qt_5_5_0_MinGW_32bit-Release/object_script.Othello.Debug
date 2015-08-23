@@ -1,0 +1,14 @@
+INPUT(
+./debug\main.o
+./debug\plateau.o
+./debug\jeton.o
+./debug\othello.o
+./debug\sujetdobservation.o
+./debug\mainwindow.o
+./debug\vuetexte.o
+./debug\monitem.o
+./debug\mascene.o
+./debug\qrc_imageothello.o
+./debug\moc_mainwindow.o
+./debug\moc_vuetexte.o
+);

@@ -1,0 +1,87 @@
+\hypertarget{classma_scene}{}\section{ma\+Scene Class Reference}
+\label{classma_scene}\index{ma\+Scene@{ma\+Scene}}
+
+
+The \hyperlink{classma_scene}{ma\+Scene} class.  
+
+
+
+
+{\ttfamily \#include $<$mascene.\+h$>$}
+
+Inheritance diagram for ma\+Scene\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classma_scene}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classma_scene_ad8365755592373b91213473b9e589612}{ma\+Scene} (\hyperlink{class_othello}{Othello} $\ast$otel, Q\+Object $\ast$parent=0)
+\begin{DoxyCompactList}\small\item\em \hyperlink{classma_scene}{ma\+Scene} creer une instance de \hyperlink{classma_scene}{ma\+Scene} \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classma_scene_aedcc2e6c3a61b134360abca67b6151d5}{}void {\bfseries mouse\+Press\+Event} (Q\+Graphics\+Scene\+Mouse\+Event $\ast$event)\label{classma_scene_aedcc2e6c3a61b134360abca67b6151d5}
+
+\item 
+void \hyperlink{classma_scene_a1a985741a00343a2024fb30154912140}{rafraichir} (\hyperlink{class_sujet_d_observation}{Sujet\+D\+Observation} $\ast$sdo)
+\begin{DoxyCompactList}\small\item\em Méthode virtuelle pure que chaque observateur concret doit implémenter \+: c\textquotesingle{}est cette méthode qu\textquotesingle{}appelle le sujet observé lors d\textquotesingle{}une notification. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \hyperlink{classma_scene}{ma\+Scene} class. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classma_scene_ad8365755592373b91213473b9e589612}{}\index{ma\+Scene@{ma\+Scene}!ma\+Scene@{ma\+Scene}}
+\index{ma\+Scene@{ma\+Scene}!ma\+Scene@{ma\+Scene}}
+\subsubsection[{ma\+Scene(\+Othello $\ast$otel, Q\+Object $\ast$parent=0)}]{\setlength{\rightskip}{0pt plus 5cm}ma\+Scene\+::ma\+Scene (
+\begin{DoxyParamCaption}
+\item[{{\bf Othello} $\ast$}]{otel, }
+\item[{Q\+Object $\ast$}]{parent = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}\label{classma_scene_ad8365755592373b91213473b9e589612}
+
+
+\hyperlink{classma_scene}{ma\+Scene} creer une instance de \hyperlink{classma_scene}{ma\+Scene} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em otel} & \hyperlink{class_sujet_d_observation}{Sujet\+D\+Observation} \\
+\hline
+{\em parent} & objet parent \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classma_scene_a1a985741a00343a2024fb30154912140}{}\index{ma\+Scene@{ma\+Scene}!rafraichir@{rafraichir}}
+\index{rafraichir@{rafraichir}!ma\+Scene@{ma\+Scene}}
+\subsubsection[{rafraichir(\+Sujet\+D\+Observation $\ast$sdo)}]{\setlength{\rightskip}{0pt plus 5cm}void ma\+Scene\+::rafraichir (
+\begin{DoxyParamCaption}
+\item[{{\bf Sujet\+D\+Observation} $\ast$}]{sdo}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\label{classma_scene_a1a985741a00343a2024fb30154912140}
+
+
+Méthode virtuelle pure que chaque observateur concret doit implémenter \+: c\textquotesingle{}est cette méthode qu\textquotesingle{}appelle le sujet observé lors d\textquotesingle{}une notification. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sdo} & le sujet d\textquotesingle{}observation qui notifie un changement. \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{class_sujet_d_observation_ab4a833d911377a2dd3c83ce8ce3ac540}{Sujet\+D\+Observation\+::notifier\+Changement()}. 
+\end{DoxySeeAlso}
+
+
+Implements \hyperlink{class_observateur_a4fcbecba73ee923d201246207b8470ce}{Observateur}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Tritan/\+Documents/\+Git\+Hub/\+Othello/\+Othello/vue/mascene.\+h\item 
+C\+:/\+Users/\+Tritan/\+Documents/\+Git\+Hub/\+Othello/\+Othello/vue/mascene.\+cpp\end{DoxyCompactItemize}

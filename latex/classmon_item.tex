@@ -1,0 +1,125 @@
+\hypertarget{classmon_item}{}\section{mon\+Item Class Reference}
+\label{classmon_item}\index{mon\+Item@{mon\+Item}}
+
+
+The \hyperlink{classmon_item}{mon\+Item} class.  
+
+
+
+
+{\ttfamily \#include $<$monitem.\+h$>$}
+
+Inheritance diagram for mon\+Item\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classmon_item}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classmon_item_a60f2f43e1320b35c90dea47e75925a92}{mon\+Item} (int lig, int col, \hyperlink{class_othello}{Othello} $\ast$ot, Q\+Graphics\+Item $\ast$parent=0)
+\begin{DoxyCompactList}\small\item\em \hyperlink{classmon_item}{mon\+Item} creer une instance de \hyperlink{classmon_item}{mon\+Item} \end{DoxyCompactList}\item 
+int \hyperlink{classmon_item_a63b914953757e5466191cfde0c8d1f1d}{get\+Ligne} ()
+\begin{DoxyCompactList}\small\item\em get\+Ligne \end{DoxyCompactList}\item 
+int \hyperlink{classmon_item_a3e37c4f04585466a8aa25c151b866feb}{get\+Colonne} ()
+\begin{DoxyCompactList}\small\item\em get\+Colonne \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classmon_item_a51ecb94c04bf5b437afd10ccdadda801}{rafraichir} (\hyperlink{class_sujet_d_observation}{Sujet\+D\+Observation} $\ast$sdo)
+\begin{DoxyCompactList}\small\item\em Méthode virtuelle pure que chaque observateur concret doit implémenter \+: c\textquotesingle{}est cette méthode qu\textquotesingle{}appelle le sujet observé lors d\textquotesingle{}une notification. \end{DoxyCompactList}\item 
+\hypertarget{classmon_item_add6f956878ad28c87004f798a46bfea3}{}void {\bfseries mouse\+Press\+Event} (Q\+Graphics\+Scene\+Mouse\+Event $\ast$event)\label{classmon_item_add6f956878ad28c87004f798a46bfea3}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \hyperlink{classmon_item}{mon\+Item} class. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classmon_item_a60f2f43e1320b35c90dea47e75925a92}{}\index{mon\+Item@{mon\+Item}!mon\+Item@{mon\+Item}}
+\index{mon\+Item@{mon\+Item}!mon\+Item@{mon\+Item}}
+\subsubsection[{mon\+Item(int lig, int col, Othello $\ast$ot, Q\+Graphics\+Item $\ast$parent=0)}]{\setlength{\rightskip}{0pt plus 5cm}mon\+Item\+::mon\+Item (
+\begin{DoxyParamCaption}
+\item[{int}]{lig, }
+\item[{int}]{col, }
+\item[{{\bf Othello} $\ast$}]{ot, }
+\item[{Q\+Graphics\+Item $\ast$}]{parent = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}\label{classmon_item_a60f2f43e1320b35c90dea47e75925a92}
+
+
+\hyperlink{classmon_item}{mon\+Item} creer une instance de \hyperlink{classmon_item}{mon\+Item} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em lig} & ligne de l\textquotesingle{}emplacement du jeton \\
+\hline
+{\em col} & colonne de l\textquotesingle{}emplacement du jeton \\
+\hline
+{\em ot} & \hyperlink{class_sujet_d_observation}{Sujet\+D\+Observation} metier \\
+\hline
+{\em parent} & \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classmon_item_a3e37c4f04585466a8aa25c151b866feb}{}\index{mon\+Item@{mon\+Item}!get\+Colonne@{get\+Colonne}}
+\index{get\+Colonne@{get\+Colonne}!mon\+Item@{mon\+Item}}
+\subsubsection[{get\+Colonne()}]{\setlength{\rightskip}{0pt plus 5cm}int mon\+Item\+::get\+Colonne (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classmon_item_a3e37c4f04585466a8aa25c151b866feb}
+
+
+get\+Colonne 
+
+\begin{DoxyReturn}{Returns}
+la colonne du jeton 
+\end{DoxyReturn}
+\hypertarget{classmon_item_a63b914953757e5466191cfde0c8d1f1d}{}\index{mon\+Item@{mon\+Item}!get\+Ligne@{get\+Ligne}}
+\index{get\+Ligne@{get\+Ligne}!mon\+Item@{mon\+Item}}
+\subsubsection[{get\+Ligne()}]{\setlength{\rightskip}{0pt plus 5cm}int mon\+Item\+::get\+Ligne (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classmon_item_a63b914953757e5466191cfde0c8d1f1d}
+
+
+get\+Ligne 
+
+\begin{DoxyReturn}{Returns}
+la ligne du jeton 
+\end{DoxyReturn}
+\hypertarget{classmon_item_a51ecb94c04bf5b437afd10ccdadda801}{}\index{mon\+Item@{mon\+Item}!rafraichir@{rafraichir}}
+\index{rafraichir@{rafraichir}!mon\+Item@{mon\+Item}}
+\subsubsection[{rafraichir(\+Sujet\+D\+Observation $\ast$sdo)}]{\setlength{\rightskip}{0pt plus 5cm}void mon\+Item\+::rafraichir (
+\begin{DoxyParamCaption}
+\item[{{\bf Sujet\+D\+Observation} $\ast$}]{sdo}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\label{classmon_item_a51ecb94c04bf5b437afd10ccdadda801}
+
+
+Méthode virtuelle pure que chaque observateur concret doit implémenter \+: c\textquotesingle{}est cette méthode qu\textquotesingle{}appelle le sujet observé lors d\textquotesingle{}une notification. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sdo} & le sujet d\textquotesingle{}observation qui notifie un changement. \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{class_sujet_d_observation_ab4a833d911377a2dd3c83ce8ce3ac540}{Sujet\+D\+Observation\+::notifier\+Changement()}. 
+\end{DoxySeeAlso}
+
+
+Implements \hyperlink{class_observateur_a4fcbecba73ee923d201246207b8470ce}{Observateur}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Tritan/\+Documents/\+Git\+Hub/\+Othello/\+Othello/vue/monitem.\+h\item 
+C\+:/\+Users/\+Tritan/\+Documents/\+Git\+Hub/\+Othello/\+Othello/vue/monitem.\+cpp\end{DoxyCompactItemize}

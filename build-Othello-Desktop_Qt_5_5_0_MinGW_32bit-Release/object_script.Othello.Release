@@ -1,0 +1,14 @@
+INPUT(
+./release\main.o
+./release\plateau.o
+./release\jeton.o
+./release\othello.o
+./release\sujetdobservation.o
+./release\mainwindow.o
+./release\vuetexte.o
+./release\monitem.o
+./release\mascene.o
+./release\qrc_imageothello.o
+./release\moc_mainwindow.o
+./release\moc_vuetexte.o
+);

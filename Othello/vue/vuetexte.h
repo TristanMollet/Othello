@@ -7,10 +7,18 @@
 #include "pattern/observateur.h"
 #include "pattern/sujetdobservation.h"
 #include "metier/othello.h"
+/*!
+ * \brief The VueTexte class
+ */
 class VueTexte : public QWidget, public Observateur
 {
     Q_OBJECT
 public:
+    /*!
+     * \brief VueTexte creer une instance de VueTexte
+     * \param sdo SujetDObservation metier
+     * \param parent
+     */
     VueTexte(Othello *sdo, QWidget *parent=0);
     void rafraichir(SujetDObservation *sdo);
     ~VueTexte();

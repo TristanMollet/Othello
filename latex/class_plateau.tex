@@ -1,0 +1,198 @@
+\hypertarget{class_plateau}{}\section{Plateau Class Reference}
+\label{class_plateau}\index{Plateau@{Plateau}}
+
+
+The \hyperlink{class_plateau}{Plateau} class Represente le plateau de jeu.  
+
+
+
+
+{\ttfamily \#include $<$plateau.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_plateau_a300fd6b9d8e3bc9856b0b2984ba2270a}{Plateau} (int largeur=8, int longueur=8)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_plateau}{Plateau} Construit un plateau de jeu de largeur et longueur donnee. Par default largeur et longueur sont de 8. \end{DoxyCompactList}\item 
+int \hyperlink{class_plateau_a6b595fd1ae0f623aed1e82daaaa43915}{get\+Largeur} ()
+\begin{DoxyCompactList}\small\item\em get\+Largeur Donne la largeur du plateau de jeu \end{DoxyCompactList}\item 
+int \hyperlink{class_plateau_a5bb31cf61b30029ee4529371bcd9c88d}{get\+Longueur} ()
+\begin{DoxyCompactList}\small\item\em get\+Longueur Donne la longueur du plateau de jeu. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::vector$<$ \hyperlink{class_jeton}{Jeton} $\ast$ $>$ $>$ \hyperlink{class_plateau_a06d81d6952b68c4c23e22c82b43fd509}{get\+Plateau} ()
+\begin{DoxyCompactList}\small\item\em get\+Plateau Donne le plateau de jeu. \end{DoxyCompactList}\item 
+bool \hyperlink{class_plateau_ac16100f204ae060224ddfed4213918b4}{ajouter\+Jeton} (std\+::string L, int l, Couleur c)
+\begin{DoxyCompactList}\small\item\em ajouter\+Jeton \end{DoxyCompactList}\item 
+bool \hyperlink{class_plateau_aa0a1087bd037191784c11cb7a27b359b}{ajouter\+Jeton} (int ligne, int colonne, Couleur c)
+\begin{DoxyCompactList}\small\item\em ajouter\+Jeton surdefinition de ajouter\+Jeton \end{DoxyCompactList}\item 
+Couleur \hyperlink{class_plateau_a5bcd44e7a53154402240110d1c0cb8ce}{gagnant} ()
+\begin{DoxyCompactList}\small\item\em gagnant trouve le gagnant \end{DoxyCompactList}\item 
+void \hyperlink{class_plateau_a3fd0420b5ee4122730b653742b0e4c6b}{reverse} (int ligne, int colonne, Couleur c)
+\begin{DoxyCompactList}\small\item\em reverse fonction qui modifie en renversant les jeton suivant les conditions du jeux \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_plateau_a8c2d5e1203b830cf3f6bbcdc488bf164}{}std\+::ostream \& {\bfseries operator$<$$<$} (std\+::ostream \&flux, \hyperlink{class_plateau}{Plateau} const \&plateau)\label{class_plateau_a8c2d5e1203b830cf3f6bbcdc488bf164}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \hyperlink{class_plateau}{Plateau} class Represente le plateau de jeu. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_plateau_a300fd6b9d8e3bc9856b0b2984ba2270a}{}\index{Plateau@{Plateau}!Plateau@{Plateau}}
+\index{Plateau@{Plateau}!Plateau@{Plateau}}
+\subsubsection[{Plateau(int largeur=8, int longueur=8)}]{\setlength{\rightskip}{0pt plus 5cm}Plateau\+::\+Plateau (
+\begin{DoxyParamCaption}
+\item[{int}]{largeur = {\ttfamily 8}, }
+\item[{int}]{longueur = {\ttfamily 8}}
+\end{DoxyParamCaption}
+)}\label{class_plateau_a300fd6b9d8e3bc9856b0b2984ba2270a}
+
+
+\hyperlink{class_plateau}{Plateau} Construit un plateau de jeu de largeur et longueur donnee. Par default largeur et longueur sont de 8. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em largeur} & La largeur du plateau de jeu \\
+\hline
+{\em longueur} & La longueur du plateau de jeu. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_plateau_ac16100f204ae060224ddfed4213918b4}{}\index{Plateau@{Plateau}!ajouter\+Jeton@{ajouter\+Jeton}}
+\index{ajouter\+Jeton@{ajouter\+Jeton}!Plateau@{Plateau}}
+\subsubsection[{ajouter\+Jeton(std\+::string L, int l, Couleur c)}]{\setlength{\rightskip}{0pt plus 5cm}bool Plateau\+::ajouter\+Jeton (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{L, }
+\item[{int}]{l, }
+\item[{Couleur}]{c}
+\end{DoxyParamCaption}
+)}\label{class_plateau_ac16100f204ae060224ddfed4213918b4}
+
+
+ajouter\+Jeton 
+
+
+\begin{DoxyParams}{Parameters}
+{\em L} & la lettre de la colonne \\
+\hline
+{\em l} & le numéro de ligne \\
+\hline
+{\em c} & la couleur du joueur \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\hypertarget{class_plateau_aa0a1087bd037191784c11cb7a27b359b}{}\index{Plateau@{Plateau}!ajouter\+Jeton@{ajouter\+Jeton}}
+\index{ajouter\+Jeton@{ajouter\+Jeton}!Plateau@{Plateau}}
+\subsubsection[{ajouter\+Jeton(int ligne, int colonne, Couleur c)}]{\setlength{\rightskip}{0pt plus 5cm}bool Plateau\+::ajouter\+Jeton (
+\begin{DoxyParamCaption}
+\item[{int}]{ligne, }
+\item[{int}]{colonne, }
+\item[{Couleur}]{c}
+\end{DoxyParamCaption}
+)}\label{class_plateau_aa0a1087bd037191784c11cb7a27b359b}
+
+
+ajouter\+Jeton surdefinition de ajouter\+Jeton 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ligne} & \\
+\hline
+{\em colonne} & \\
+\hline
+{\em c} & la couleur du joueur \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\hypertarget{class_plateau_a5bcd44e7a53154402240110d1c0cb8ce}{}\index{Plateau@{Plateau}!gagnant@{gagnant}}
+\index{gagnant@{gagnant}!Plateau@{Plateau}}
+\subsubsection[{gagnant()}]{\setlength{\rightskip}{0pt plus 5cm}Couleur Plateau\+::gagnant (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_plateau_a5bcd44e7a53154402240110d1c0cb8ce}
+
+
+gagnant trouve le gagnant 
+
+\begin{DoxyReturn}{Returns}
+la couleur du gagnant 
+\end{DoxyReturn}
+\hypertarget{class_plateau_a6b595fd1ae0f623aed1e82daaaa43915}{}\index{Plateau@{Plateau}!get\+Largeur@{get\+Largeur}}
+\index{get\+Largeur@{get\+Largeur}!Plateau@{Plateau}}
+\subsubsection[{get\+Largeur()}]{\setlength{\rightskip}{0pt plus 5cm}int Plateau\+::get\+Largeur (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_plateau_a6b595fd1ae0f623aed1e82daaaa43915}
+
+
+get\+Largeur Donne la largeur du plateau de jeu 
+
+\begin{DoxyReturn}{Returns}
+largeur du plateau. 
+\end{DoxyReturn}
+\hypertarget{class_plateau_a5bb31cf61b30029ee4529371bcd9c88d}{}\index{Plateau@{Plateau}!get\+Longueur@{get\+Longueur}}
+\index{get\+Longueur@{get\+Longueur}!Plateau@{Plateau}}
+\subsubsection[{get\+Longueur()}]{\setlength{\rightskip}{0pt plus 5cm}int Plateau\+::get\+Longueur (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_plateau_a5bb31cf61b30029ee4529371bcd9c88d}
+
+
+get\+Longueur Donne la longueur du plateau de jeu. 
+
+\begin{DoxyReturn}{Returns}
+La longueur du plateau de jeu.? 
+\end{DoxyReturn}
+\hypertarget{class_plateau_a06d81d6952b68c4c23e22c82b43fd509}{}\index{Plateau@{Plateau}!get\+Plateau@{get\+Plateau}}
+\index{get\+Plateau@{get\+Plateau}!Plateau@{Plateau}}
+\subsubsection[{get\+Plateau()}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$std\+::vector$<${\bf Jeton}$\ast$$>$ $>$ Plateau\+::get\+Plateau (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_plateau_a06d81d6952b68c4c23e22c82b43fd509}
+
+
+get\+Plateau Donne le plateau de jeu. 
+
+\begin{DoxyReturn}{Returns}
+Le plateau de jeu. 
+\end{DoxyReturn}
+\hypertarget{class_plateau_a3fd0420b5ee4122730b653742b0e4c6b}{}\index{Plateau@{Plateau}!reverse@{reverse}}
+\index{reverse@{reverse}!Plateau@{Plateau}}
+\subsubsection[{reverse(int ligne, int colonne, Couleur c)}]{\setlength{\rightskip}{0pt plus 5cm}void Plateau\+::reverse (
+\begin{DoxyParamCaption}
+\item[{int}]{ligne, }
+\item[{int}]{colonne, }
+\item[{Couleur}]{c}
+\end{DoxyParamCaption}
+)}\label{class_plateau_a3fd0420b5ee4122730b653742b0e4c6b}
+
+
+reverse fonction qui modifie en renversant les jeton suivant les conditions du jeux 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ligne} & ligne de depart \\
+\hline
+{\em colonne} & colonne de depart \\
+\hline
+{\em c} & couleur du joueur courant \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Tritan/\+Documents/\+Git\+Hub/\+Othello/\+Othello/metier/plateau.\+h\item 
+C\+:/\+Users/\+Tritan/\+Documents/\+Git\+Hub/\+Othello/\+Othello/metier/plateau.\+cpp\end{DoxyCompactItemize}
